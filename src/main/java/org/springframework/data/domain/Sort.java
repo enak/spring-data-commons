@@ -322,10 +322,10 @@ public class Sort implements Streamable<org.springframework.data.domain.Sort.Ord
 		}
 
 		/**
-		 * Returns the {@link Direction} enum for the given {@link String} or null if it cannot be parsed into an enum
-		 * value.
+		 * Returns the {@link Direction} enum for the given {@link String} or {@link Optional#empty} if
+		 * it cannot be parsed into an enum value. The enum and string comparison is case insensitive.
 		 *
-		 * @param value
+		 * @param value can be {@literal null} and is case insensitive
 		 * @return
 		 */
 		public static Optional<Direction> fromOptionalString(String value) {
